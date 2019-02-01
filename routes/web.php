@@ -11,10 +11,16 @@
 |
 */
 
+use App\Product;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Auth::routes();
+
+Route::get('/products', function() {
+    return Product::all();
+});
 
 Route::get('/home', 'HomeController@index')->name('home');
