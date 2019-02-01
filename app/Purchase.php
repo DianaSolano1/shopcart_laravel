@@ -14,6 +14,6 @@ class Purchase extends Model
     // relacion a los productos
     public function products() {
         return $this->belongsToMany('App\Product')
-            -withPivot('price');
+            -withPivot('quantity');
     }
 }
